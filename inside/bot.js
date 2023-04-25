@@ -87,7 +87,7 @@ const start = async () => {
     client.ev.on('connection.update', (update) => {
         if (update.qr) {
             helper.log(
-                `QR code generated. Scan it to continue or go to http://localhost:${helper.config.PORT}`
+                `QR code generated. Scan it to continue or scan at http://localhost:${helper.config.PORT}`
             )
             helper.QR = qr.imageSync(update.qr)
         }
