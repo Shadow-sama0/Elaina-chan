@@ -45,7 +45,7 @@ module.exports = class command extends Command {
                 text += `\`\`\`${categoryCommands.join(', ')}\`\`\``
             }
             //text += `\n\n🗿 You can use ${this.helper.config.prefix}help ⌈command name⌋ for more info about a command\nExample: *${this.helper.config.prefix}help info`
-            text += `\n\n  ⌈🎀${this.helper.config.name}🔮⌋\nA bot developed by Empty-Sama\n\nUse ${this.helper.config.prefix}help [command name] for more info about a command`
+            text += `\n\n\`\`\`  ⌈🎀${this.helper.config.name}🔮⌋\nA bot developed by Empty-Sama\n\nUse ${this.helper.config.prefix}help [command name] for more info about a command\`\`\``
             return void (await M.reply(image, 'image', true, undefined, text, [M.sender.jid]))
         } else {
             const cmd = context.trim().toLowerCase()
